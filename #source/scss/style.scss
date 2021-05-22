@@ -44,6 +44,21 @@ body {
   -webkit-text-size-adjust: 100%;
   background-color: var(--light-blue);
   font-family: "Reggae One", cursive;
+  scrollbar-color: var(--orange) var(--white); /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin; /* толщина */
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+    background: var(--white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 3px;
+    &:hover {
+      background: var(--orange-hover);
+    }
+  }
 }
 input,
 button,
@@ -87,7 +102,7 @@ h6 {
 :root {
   --white: #ffffff;
   --black: #424d51;
-  --light-blue: #98d1e4;
+  --light-blue: #a0d4e5;
   --pearl: rgb(212, 103, 147);
   --orange: #f69a73;
   --orange-hover: #e78d66;
@@ -104,7 +119,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 0px 50px 0px;
+  padding: 30px 0px 70px 0px;
 }
 .head-avatar {
   border-radius: 50%;
@@ -348,9 +363,12 @@ input::-webkit-calendar-picker-indicator {
       color: #107410;
     }
     &:nth-child(2) {
-      color: #0081cc;
+      color: #0088d6;
     }
     &:nth-child(3) {
+      color: #8a3ab9;
+    }
+    &:nth-child(4) {
       color: #4267b2;
     }
     &:hover {
