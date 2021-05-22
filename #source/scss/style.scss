@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-// font-family: 'Open Sans', sans-serif;
-@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
-//font-family: 'Reggae One', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+//font-family: 'Courgette', cursive;
 
 /*Обнуление*/
 * {
@@ -42,8 +40,8 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  background-color: var(--light-blue);
-  font-family: "Reggae One", cursive;
+  // background-color: var(--light-blue);
+  font-family: "Courgette", cursive;
   scrollbar-color: var(--orange) var(--white); /* «цвет ползунка» «цвет полосы скроллбара» */
   scrollbar-width: thin; /* толщина */
   &::-webkit-scrollbar {
@@ -111,6 +109,13 @@ h6 {
 /*--------------------*/
 
 .content {
+  width: 100%;
+  background: url(../img/background.jpg) no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.wrapper {
 }
 
 .wrapper {
@@ -210,7 +215,7 @@ h6 {
   position: absolute;
   width: 50px;
   height: 20px;
-  background: var(--light-blue);
+  background: rgba(255, 255, 255, 0);
   border-radius: 20px;
 }
 .form-left-decoration {
@@ -271,6 +276,15 @@ h6 {
   border-radius: 20px;
   font-size: 18px;
 }
+textarea,
+input {
+  &::placeholder {
+    color: black;
+  }
+  &::-moz-placeholder {
+    color: black;
+  }
+}
 .submit-btn {
   background: var(--orange);
   border-bottom: 4px solid #d87d56;
@@ -304,28 +318,28 @@ input {
   height: 45px;
 }
 
-input:before {
-  position: absolute;
-  top: 7px;
-  left: 18px;
-  content: attr(data-date);
-  display: inline-block;
-  color: var(--grey);
-}
+// input:before {
+//   position: absolute;
+//   top: 7px;
+//   left: 18px;
+//   content: attr(data-date);
+//   display: inline-block;
+//   color: var(--grey);
+// }
 
-input::-webkit-datetime-edit,
-input::-webkit-inner-spin-button,
-input::-webkit-clear-button {
-  display: none;
-}
+// input::-webkit-datetime-edit,
+// input::-webkit-inner-spin-button,
+// input::-webkit-clear-button {
+//   display: none;
+// }
 
-input::-webkit-calendar-picker-indicator {
-  position: absolute;
-  top: 3px;
-  right: 0;
-  color: black;
-  opacity: 1;
-}
+// input::-webkit-calendar-picker-indicator {
+//   position: absolute;
+//   top: 3px;
+//   right: 0;
+//   color: black;
+//   opacity: 1;
+// }
 
 .attention-text {
   text-align: center;
